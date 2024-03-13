@@ -98,13 +98,13 @@ void loop() {
   lcd.print("Distance: ");
   lcd.print(distance_cm);
 
-  if (sensorValue > 400) {
-    myServo.write(0);
+  if (sensorValue > 450) {
+    myServo.write(180);
     lcd.print(sensorValue);
     delay(1000);
   } else {
     lcd.print(sensorValue);
-    myServo.write(180);
+    myServo.write(0);
     delay(1000);
   }
 
